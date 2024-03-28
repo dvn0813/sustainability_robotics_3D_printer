@@ -1,4 +1,4 @@
-# sustainability_robotics_3D_printer
+# Introduction
 This page is intended to assist in knowledge transfer between thesis students in the Sustainability Robotics group at EMPA working with the 3D printer.
 
 
