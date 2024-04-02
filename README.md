@@ -28,7 +28,7 @@ The Marlin Firmware was adjusted to accomodate the limitations and needs of our 
 
 ## Z-Steppers Alignment
 
-### Z-Steppers Auto-Alignment **not possible using Prusa Einsy Rambo Board**
+### Z-Steppers Auto-Alignment *not possible using Prusa Einsy Rambo Board*
 Marlin Documentation can be found [here](https://marlinfw.org/docs/configuration/configuration.html#z-steppers-auto-alignment)  
 -uncommented line 973 in Configuration_adv.h  
 -line 981: #define Z_STEPPER_ALIGN_XY { {  30, 180 }, { 110,  30 }, { 180, 180 } }
