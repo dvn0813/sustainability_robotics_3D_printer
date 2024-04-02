@@ -1,5 +1,5 @@
 # Note
-This page is intended to assist in the knowledge transfer between thesis students at the Sustainability Robotics group at EMPA working with the 3d printer.
+This page's intention is to assist in the transfer of knowledge between thesis students at the Sustainability Robotics group at EMPA working with the modified 3d printer.
 This repository was established by David Niu Bachelor Thesis Spring 2024
 
 A prerequisite for the usage is the successful installation of VS code. Please do that before continuing.
@@ -8,7 +8,6 @@ A prerequisite for the usage is the successful installation of VS code. Please d
 
 
 # Instructions for Usage
-The printer uses G-Code, to work
 
 
 
