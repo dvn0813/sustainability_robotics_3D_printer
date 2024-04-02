@@ -22,14 +22,6 @@ The control over the different components of the 3D printer is done by the firmw
 The Marlin Firmware was adjusted to accomodate the limitations and needs of our print setup. All firmware changes deviating from the original ["Marlin Prusa MK3" configuration](https://github.com/MarlinFirmware/Configurations) are listed down below.
 
 
-## G-Code
-### [G34](https://marlinfw.org/docs/gcode/G034-zsaa.html) - Z-Steppers Auto-Alignment
-Using 2 stepper motors for Z-Axis control, both stepper motors need to be aligned:
-
-
-
-
-
 # Performed Firmware Adjustments
 ## Homing Adjustments
 
