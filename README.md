@@ -20,6 +20,7 @@ Using [Repetier](https://www.repetier.com/) you can connect your computer with t
 
 ### Firmware
 The control over the different components of the 3D printer is done by the firmware which can be compared how Arduino works. In the firmware standard procedures and parameters are controlled. Adjusting firmware allows for advanced usage of the 3d printer and modification. The original [Prusa Firmware](https://github.com/prusa3d/Prusa-Firmware) is based on the Marlin Firmware. The modified 3d printer uses the Marlin Firmware, which can be found [here](https://marlinfw.org/). The Marlin Firmware is preferred over the original Prusa Firmware because the adjustments are more centralized, allowing for more flexibility and being easier to flash. A guide on adjusting and flashing the firmware is seen [here](https://youtu.be/eq_ygvHF29I?si=oBdEPBt3eG3QWW10.)
+The Marlin Firmware was adjusted to accomodate the limitations and needs of our print setup. All firmware changes deviating from the original "Marlin Prusa MK3" configuration are listed down below.
 
 
 ## G-Code
