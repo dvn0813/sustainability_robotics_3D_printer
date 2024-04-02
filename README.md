@@ -33,7 +33,7 @@ Using 2 stepper motors for Z-Axis control, both stepper motors need to be aligne
 The Einsy Rambo board of Prusa MK3 does not support "Z Steppers Auto-Alignment", as one stepper driver is used for both Z-steppers, meaning they are independent of each other.
 Nonetheless the Auto-Alignment can be achieved by using [mechanically forced alignment](https://www.reddit.com/r/ender3v2/comments/oy0sct/comment/h7pttyc/?utm_source=share&utm_medium=web2x&context=3)
 
-'''
+```
 ; Align X Axis Gantry / Calibrate Dual Z Steppers
 
 ; Similar to M915: Mechanical Alignment
@@ -59,7 +59,7 @@ G28 ; Home all axes
 ;G29 ; ABL - BLTouch
 
 M18 S0 Z ; Prevents the idle disabling of the z-steppers
-'''
+```
 
 ## Bed leveling
 Bed leveling can be achieved by manual leveling through changing to bed_mesh_leveling in the marlin firmware. [Here](https://all3dp.com/2/mesh-bed-leveling-all-you-need-to-know/) is a tutorial on how it is done.
