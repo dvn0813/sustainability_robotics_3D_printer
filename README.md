@@ -1,5 +1,7 @@
-# Introduction
-This page is intended to assist in knowledge transfer between thesis students in the Sustainability Robotics group at EMPA working with the 3D printer.  
+# Note
+This page is intended to assist in the knowledge transfer between thesis students at the Sustainability Robotics group at EMPA working with the 3d printer.
+This repository was established by David Niu
+
 A prerequisite for the usage is the successful installation of VS code. Please do that before continuing.
 
 
