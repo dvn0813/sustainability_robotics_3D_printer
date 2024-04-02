@@ -22,8 +22,8 @@ Using 2 stepper motors for Z-Axis control, both stepper motors need to be aligne
 
 # Performed Firmware Adjustments
 ## Z-Steppers Auto-Alignment
-Marlin Documentation can be found [here](https://marlinfw.org/docs/configuration/configuration.html#z-steppers-auto-alignment)\\
--uncommented line 973 in Configuration_adv.h \\
+Marlin Documentation can be found [here](https://marlinfw.org/docs/configuration/configuration.html#z-steppers-auto-alignment).
+-uncommented line 973 in Configuration_adv.h.
 -line 981: #define Z_STEPPER_ALIGN_XY { {  30, 180 }, { 110,  30 }, { 180, 180 } }
 
 
