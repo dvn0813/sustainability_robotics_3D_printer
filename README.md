@@ -11,7 +11,9 @@ The printer uses G-Code, to work
 
 
 ## First steps
+### G-Code generation 
 For G-Code generation use the FullControlXYZ library on python. The GitHub repository can be found [here](https://github.com/FullControlXYZ/fullcontrol). FullControlXYZ can be used to generate G-Code. 
+### Control over printer and G-Code uploading
 Using [Repetier](https://www.repetier.com/) you can connect your computer with the printer. This allows for direct manual control over the position of your print head and other parameters, furthermore it allows for fast G-Code upload and offers a preview of the print. 
 
 
