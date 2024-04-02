@@ -14,7 +14,7 @@ The printer uses G-Code, to work
 ### G-Code generation 
 For G-Code generation use the FullControlXYZ library on python. The GitHub repository can be found [here](https://github.com/FullControlXYZ/fullcontrol). FullControlXYZ can be used to generate G-Code. 
 ### Control over printer and G-Code uploading
-Using [Repetier](https://www.repetier.com/) you can connect your computer with the printer. This allows for direct manual control over the position of your print head and other parameters, furthermore it allows for fast G-Code upload and offers a preview of the print. 
+Using [Repetier](https://www.repetier.com/) you can connect your computer with the printer. This allows for direct manual control over the position of your print head and other parameters. Furthermore it allows for fast uploading of the G-Code and a rough preview is depicted.
 
 ### Firmware
 The control of the different components of the 3D printer is controlled by firmware. The modified 3d printer uses the Marlin Firmware, which can be found [here](https://marlinfw.org/)
