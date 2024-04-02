@@ -16,6 +16,10 @@ For G-Code generation use the FullControlXYZ library on python. The GitHub repos
 ### Control over printer and G-Code uploading
 Using [Repetier](https://www.repetier.com/) you can connect your computer with the printer. This allows for direct manual control over the position of your print head and other parameters, furthermore it allows for fast G-Code upload and offers a preview of the print. 
 
+### Firmware
+The control of the different components of the 3D printer is controlled by firmware. The modified 3d printer uses the Marlin Firmware, which can be found [here](https://marlinfw.org/)
+Additionally standard values for different parameters are determined via the firmware. Advanced features can also be adjusted via firmware. The original [Prusa Firmware](https://github.com/prusa3d/Prusa-Firmware) is based on the Marlin Firmware. The Marlin Firmware is used because it is more centralized, allows for more flexibility and is easier to flash. A guide on adjusting and flashing the firmware is seen [here](https://youtu.be/eq_ygvHF29I?si=oBdEPBt3eG3QWW10.)
+
 
 ## G-Code
 ### [G34](https://marlinfw.org/docs/gcode/G034-zsaa.html) - Z-Steppers Auto-Alignment
