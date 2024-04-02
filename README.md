@@ -43,7 +43,7 @@ Marlin Documentation can be found [here](https://marlinfw.org/docs/configuration
 -line 981: #define Z_STEPPER_ALIGN_XY { {  30, 180 }, { 110,  30 }, { 180, 180 } }
 ### Z-Steppers Auto-Alignment - mechanically forced
 The Einsy Rambo board of Prusa MK3 does not support "Z Steppers Auto-Alignment". Only one stepper driver is used for both Z-steppers, meaning they are independent of each other and are always activated at the same time.
-Nonetheless the Auto-Alignment can be achieved by using [mechanically forced alignment](https://www.reddit.com/r/ender3v2/comments/oy0sct/comment/h7pttyc/?utm_source=share&utm_medium=web2x&context=3) via G-code which was previously M915 (deprecated) on Marlin. The following G-Code can be added prior to the actual print:
+Nonetheless the Auto-Alignment can be achieved using [mechanically forced alignment](https://www.reddit.com/r/ender3v2/comments/oy0sct/comment/h7pttyc/?utm_source=share&utm_medium=web2x&context=3) via G-code which was previously M915 (deprecated) on Marlin. The following G-Code can be added prior to the actual print:
 
 ```
 ; Align X Axis Gantry / Calibrate Dual Z Steppers
