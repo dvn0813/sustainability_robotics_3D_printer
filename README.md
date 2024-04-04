@@ -25,6 +25,30 @@ The Marlin Firmware was adjusted to accomodate the limitations and needs of our 
 # Required G-Code Headers
 
 # Performed Firmware Adjustments
+
+## Bed Size
+In line 1753 "geometry section". The values are adjusted according to the syringe position and the syringe holder.
+```
+// @section geometry
+
+// The size of the printable area
+#define X_BED_SIZE 225
+#define Y_BED_SIZE 210
+
+// Travel limits (linear=mm, rotational=°) after homing, corresponding to endstop positions.
+#define X_MIN_POS 1.5
+#define Y_MIN_POS -20
+#define Z_MIN_POS 0
+#define X_MAX_POS 226.5
+#define Y_MAX_POS 235
+```
+
+1756 in Configuration.h 
+Due to the size of the syringe holder, the printable bed size is limited. The X_Bed_Size is reduced from 250 mm to 230 mm. The Y_Bed_Size
+
+
+
+
 ## Homing Adjustments
 
 
