@@ -33,14 +33,14 @@ In Configuration.h, line 1753 "geometry section", the values are adjusted accord
 
 // The size of the printable area
 #define X_BED_SIZE 225
-#define Y_BED_SIZE 210
+#define Y_BED_SIZE 200
 
 // Travel limits (linear=mm, rotational=°) after homing, corresponding to endstop positions.
 #define X_MIN_POS 1.5
 #define Y_MIN_POS -20
 #define Z_MIN_POS 0
 #define X_MAX_POS 226.5
-#define Y_MAX_POS 235
+#define Y_MAX_POS 220
 ```
 
 1756 in Configuration.h 
