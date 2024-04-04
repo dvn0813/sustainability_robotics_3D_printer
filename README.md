@@ -22,6 +22,8 @@ The control over the different components of the 3D printer is done by the firmw
 The Marlin Firmware was adjusted to accomodate the limitations and needs of our print setup. All firmware changes deviating from the original "Marlin Prusa MK3" [configuration](https://github.com/MarlinFirmware/Configurations) are listed down below.
 
 
+# Required G-Code Headers
+
 # Performed Firmware Adjustments
 ## Homing Adjustments
 
