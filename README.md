@@ -27,7 +27,7 @@ The Marlin Firmware was adjusted to accomodate the limitations and needs of our 
 # Performed Firmware Adjustments
 
 ## Bed Size
-In line 1753 "geometry section". The values are adjusted according to the syringe position and the syringe holder.
+In Configuration.h, line 1753 "geometry section", the values are adjusted according to the syringe position and the syringe holder.
 ```
 // @section geometry
 
