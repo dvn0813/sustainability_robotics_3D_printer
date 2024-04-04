@@ -71,7 +71,9 @@ Additionally by defining the height before and after homing, bumping of syringe 
 #define Z_AFTER_HOMING  20      // (mm) Height to move to after homing Z
 ```
 ### Adjusting Offset between Probe and Needle Tip
-Using the PROBE_OFFSET_WIZARD function, the calibration of the offset between probe and needle can be done. Additionally this allows for calibration before a print when the print substrate cannot be detected by the PINDA. The code can be found in Configuration_adv.h in line 1382.
+Using the PROBE_OFFSET_WIZARD function, the calibration of the offset between probe and needle can be done. Additionally this allows for calibration before a print when the print substrate cannot be detected by the PINDA. The code can be found in Configuration_adv.h in line 1382. Use a "PROBE_OFFSET_WIZARD_START_Z" greater than the expected offset and adjust via LCD menu. This method allows you to keep all of the previously performed steps such as Bed Leveling and Homing, which would be otherwise deleted when pressing "Terminate" in the Repetier program.
+
+
 ```
 #if HAS_BED_PROBE && EITHER(HAS_MARLINUI_MENU, HAS_TFT_LVGL_UI)
   #define PROBE_OFFSET_WIZARD       // Add a Probe Z Offset calibration option to the LCD menu
