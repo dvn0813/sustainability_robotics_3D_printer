@@ -50,14 +50,28 @@ Due to the size of the syringe holder, the printable bed size is limited. The X_
 
 
 ## Homing Adjustments
+### Note
+Please note that the Z-Axis adjustments are dependent on the position of the PINDA (Prusa INDuktion Autoleveling Sensor). Should the syringe holding part be changed or the PINDA be reattached, after-homing-values will need to be adjusted accordingly. 
+### Safe Homing
+Homing can be performed while the syringe tip is attached (Bed Leveling must not be done with attached syringe or tip). To ensure safe homing, "Z_SAFE_HOMING" is enabled. The Z-Homing position is set at a point where the syringe is outside of the bed. This enables homing with the syringe even though the syringe tip is protruding compared to the probe.
+```
+#define Z_SAFE_HOMING
 
-
-Please note that the Z-Axis adjustments are dependent on the position of the PINDA (Prusa INDuktion Autoleveling Sensor). Should the syringe holding part be changed or the PINDA be reattached, after-homing-values will need to be adjusted accordingly. This can be done by defining the NOZZLE_TO_PROBE_OFFSET in line 1546 in Configuration.h. 
+#if ENABLED(Z_SAFE_HOMING)
+  #define Z_SAFE_HOMING_X_POINT 100  // (mm) X point for Z homing
+  #define Z_SAFE_HOMING_Y_POINT 0  // (mm) Y point for Z homing
+#endif
+```
+Additionally by defining the height before and after homing, bumping of syringe tip and print bed is prevented. The responsible code is in Configuration.h in line 1736.
 
 ```
-#define NOZZLE_TO_PROBE_OFFSET { 23, 5, 10 }
-```
+#define Z_HOMING_HEIGHT  20      // (mm) Minimal Z height before homing (G28) for Z clearance above the bed, clamps, ...
+                                  // Be sure to have this much clearance over your Z_MAX_POS to prevent grinding.
 
+#define Z_AFTER_HOMING  20      // (mm) Height to move to after homing Z
+```
+### Adjusting Offset between Probe and Needle Tip
+Using the PROBE_OFFSET_WIZARD function, the 
 
 
 
