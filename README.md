@@ -52,7 +52,13 @@ Due to the size of the syringe holder, the printable bed size is limited. The X_
 ## Homing Adjustments
 
 
-Please note that the Z-Axis adjustments are dependent on the position of the PINDA (Prusa INDuktion Autoleveling Sensor). Should the syringe holding part be changed or the PINDA be reattached, after-homing-values will need to be adjusted accordingly.
+Please note that the Z-Axis adjustments are dependent on the position of the PINDA (Prusa INDuktion Autoleveling Sensor). Should the syringe holding part be changed or the PINDA be reattached, after-homing-values will need to be adjusted accordingly. This can be done by defining the NOZZLE_TO_PROBE_OFFSET in line 1546 in Configuration.h. 
+
+```
+#define NOZZLE_TO_PROBE_OFFSET { 23, 5, 10 }
+```
+
+
 
 
 
