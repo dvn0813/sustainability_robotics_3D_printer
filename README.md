@@ -51,9 +51,9 @@ Due to the size of the syringe holder, the printable bed size is limited. The X_
 
 ## Homing Adjustments
 ### Note
-Please note that the Z-Axis adjustments are dependent on the position of the PINDA (Prusa INDuktion Autoleveling Sensor). Should the syringe holding part be changed or the PINDA be reattached, after-homing-values will need to be adjusted accordingly. 
+Please note that the Z-Axis adjustments are dependent on the position of the PINDA (Prusa INDuktion Autoleveling Sensor). Should the syringe holding part be changed or the PINDA be reattached, after-homing-values will need to be adjusted accordingly. Also note that the PINDA uses induction to detect the print bed, meaning it can only detect conducting (metallic) print beds. When using a non-metallic print substrate, adjust the distance accordingly with Z_OFFSET_WIZARD, which will be covered down below.
 ### Safe Homing
-Homing can be performed while the syringe tip is attached (Bed Leveling must not be done with attached syringe or tip). To ensure safe homing, "Z_SAFE_HOMING" is enabled. The Z-Homing position is set at a point where the syringe is outside of the bed. This enables homing with the syringe even though the syringe tip is protruding compared to the probe.
+Homing can be performed while the syringe tip is attached (Bed Leveling must not be done with attached syringe or tip). To ensure safe homing, "Z_SAFE_HOMING" is enabled. The Z-Homing position is set at a point where the syringe is outside of the bed. This enables homing with the syringe even though the syringe tip is protruding compared to the probe. The code for Z_SAFE_HOMING can be found in Configuration.h in line 2156.
 ```
 #define Z_SAFE_HOMING
 
@@ -71,23 +71,28 @@ Additionally by defining the height before and after homing, bumping of syringe 
 #define Z_AFTER_HOMING  20      // (mm) Height to move to after homing Z
 ```
 ### Adjusting Offset between Probe and Needle Tip
-Using the PROBE_OFFSET_WIZARD function, the 
-
-
-
-
+Using the PROBE_OFFSET_WIZARD function, the calibration of the offset between probe and needle can be done. Additionally this allows for calibration before a print when the print substrate cannot be detected by the PINDA. The code can be found in Configuration_adv.h in line 1382.
 ```
-#define Z_CLEARANCE_DEPLOY_PROBE    2 // (mm) Z Clearance for Deploy/Stow
-#define Z_CLEARANCE_BETWEEN_PROBES  2 // (mm) Z Clearance between probe points
-#define Z_CLEARANCE_MULTI_PROBE     1 // (mm) Z Clearance between multiple probes
-//#define Z_AFTER_PROBING           5 // (mm) Z position after probing is done
+#if HAS_BED_PROBE && EITHER(HAS_MARLINUI_MENU, HAS_TFT_LVGL_UI)
+  #define PROBE_OFFSET_WIZARD       // Add a Probe Z Offset calibration option to the LCD menu
+  #if ENABLED(PROBE_OFFSET_WIZARD)
+    /**
+     * Enable to init the Probe Z-Offset when starting the Wizard.
+     * Use a height slightly above the estimated nozzle-to-probe Z offset.
+     * For example, with an offset of -5, consider a starting height of -4.
+     */
+    #define PROBE_OFFSET_WIZARD_START_Z 12
 
-#define Z_PROBE_LOW_POINT          -1 // (mm) Farthest distance below the trigger-point to go before stopping
-
-// For M851 give a range for adjusting the Z probe offset
-#define Z_PROBE_OFFSET_RANGE_MIN -3
-#define Z_PROBE_OFFSET_RANGE_MAX  0
+    // Set a convenient position to do the calibration (probing point and nozzle/bed-distance)
+    X_CENTER = 100
+    Y_CENTER = 100
+    #define PROBE_OFFSET_WIZARD_XY_POS { X_CENTER, Y_CENTER }
+  #endif
+#endif
 ```
+
+
+
 
 ## Z-Steppers Alignment
 
