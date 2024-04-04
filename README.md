@@ -50,10 +50,24 @@ Due to the size of the syringe holder, the printable bed size is limited. The X_
 
 
 ## Homing Adjustments
+
+
 Please note that the Z-Axis adjustments are dependent on the position of the PINDA (Prusa INDuktion Autoleveling Sensor). Should the syringe holding part be changed or the PINDA be reattached, after-homing-values will need to be adjusted accordingly.
 
 
 
+```
+#define Z_CLEARANCE_DEPLOY_PROBE    2 // (mm) Z Clearance for Deploy/Stow
+#define Z_CLEARANCE_BETWEEN_PROBES  2 // (mm) Z Clearance between probe points
+#define Z_CLEARANCE_MULTI_PROBE     1 // (mm) Z Clearance between multiple probes
+//#define Z_AFTER_PROBING           5 // (mm) Z position after probing is done
+
+#define Z_PROBE_LOW_POINT          -1 // (mm) Farthest distance below the trigger-point to go before stopping
+
+// For M851 give a range for adjusting the Z probe offset
+#define Z_PROBE_OFFSET_RANGE_MIN -3
+#define Z_PROBE_OFFSET_RANGE_MAX  0
+```
 
 ## Z-Steppers Alignment
 
@@ -96,6 +110,21 @@ M18 S0 Z ; Prevents the idle disabling of the z-steppers
 
 ## Bed leveling
 Bed leveling can be achieved by manual leveling through changing to bed_mesh_leveling in the marlin firmware. [Here](https://all3dp.com/2/mesh-bed-leveling-all-you-need-to-know/) is a tutorial on how it is done.
+
+
+
+```
+#if EITHER(AUTO_BED_LEVELING_3POINT, AUTO_BED_LEVELING_UBL)
+  #define PROBE_PT_1_X 30
+  #define PROBE_PT_1_Y 200
+
+  #define PROBE_PT_2_X 200
+  #define PROBE_PT_2_Y 200
+  
+  #define PROBE_PT_3_X 200
+  #define PROBE_PT_3_Y 30
+#endif
+```
 
 # CAD syringe pump
 The STL(CAD) files can be found in the folders
