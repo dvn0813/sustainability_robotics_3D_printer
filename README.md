@@ -23,10 +23,11 @@ The Marlin Firmware was adjusted to accomodate the needs and limitations of our 
 1. Write the code for your desired pattern on python using FullControlXYZ
 2. Run your code to obtain the G-Code file
 3. Connect your computer to the 3d printer
-4. Run Homing, Bed Leveling, Homing and Probe-Offset-Wizard
-5. When calibrating with Offset-Wizard, attach your syringe and move the syringe on top of the print bed using Repetier (Y:+10).
-6. Calibrate with a piece of paper
-7. Start with your print
+4. Insert your G-Code.
+5. Automatically run Homing, Bed Leveling, Homing and Probe-Offset-Wizard without syringe.
+6. When calibrating with Offset-Wizard, attach your syringe and move the syringe on top of the print bed using Repetier (Y:+10).
+7. Calibrate with a piece of paper until adequate resistance
+8. Start with your print
 
 # Required G-Code Headers
 ## Complete Calibration (without syringe at the beginning)
