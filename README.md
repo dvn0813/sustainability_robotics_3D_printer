@@ -64,7 +64,12 @@ M106 S0 ; set fan speed
 M851 ; Homing and then Probe-Offset-Wizard
 ```
 # Required FullControlXYZ headers
-Any FullControlXYZ .py file can be taken as example. 
+Any FullControlXYZ .py file can be taken as example. The printer_name is taken as "generic" as the Marlin firmware is used.
+The following G-Code header will be automatically added by FullControlXYZ when using 
+
+
+
+
 ## Retraction settings
 Retraction settings can be managed through the firmware. In our case it is beneficial to adjust retraction through the G-Code as adjustments need to be made for different printing materials. The G-Code ```M207 S0.01 F30``` is used to set the amount and speed of retraction. The G-Code ```M208 S0.1 F30``` is used to set the surplus amount and speed of unretraction.
 ```
