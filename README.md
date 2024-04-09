@@ -1,9 +1,7 @@
 # Note
-This page's intention is to assist in the transfer of knowledge between thesis students at the Sustainability Robotics group at EMPA working with the modified 3d printer.
-This repository was established by David Niu Bachelor Thesis Spring 2024
+The purpose of this page is to facilitate knowledge exchange among thesis students within the Sustainability Robotics group at EMPA who are working with the modified 3D printer. This repository was established by David Niu for his Bachelor's Thesis in Spring 2024.
 
-A prerequisite for the usage is the successful installation of VS code. Please do that before continuing.
-
+Before proceeding, it is essential to ensure that VS Code is successfully installed. Please complete this prerequisite before continuing.
 
 
 
