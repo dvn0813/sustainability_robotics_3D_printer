@@ -21,6 +21,9 @@ The Marlin Firmware was adjusted to accomodate the needs and limitations of our 
 
 # Your first print
 
+
+# Required G-Code Headers
+## Complete Calibration (without syringe at the beginning)
 ```
 M83 ; relative extrusion
 M140 S0 ; set bed temp and continue
@@ -28,10 +31,10 @@ M104 S0 ; set hotend temp and continue
 M190 S0 ; set bed temp and wait
 M109 S0  ; set hotend temp and wait
 M106 S0 ; set fan speed
+
+
 ; Align X Axis Gantry / Calibrate Dual Z Steppers
-
 ; Similar to M915: Mechanical Alignment
-
 G28 ; Home all axes
 G0 Z250 ; Go to Z Top Max
 M211 S0 ; Disable Software Endstops
@@ -44,18 +47,25 @@ G28 ; Home all axes
 ;G29 ; ABL - BLTouch
 M18 S0 Z ; Prevents the idle disabling of the z-steppers
 
-
-
-
-
 G28 ; Homing
 G29 ; Bed leveling
 M0 [attach syringe] ; 
 M851 ; Homing and then Probe-Offset-Wizard
+```
+## Homing and Probe-Offset-Wizard
+```
+M83 ; relative extrusion
+M140 S0 ; set bed temp and continue
+M104 S0 ; set hotend temp and continue
+M190 S0 ; set bed temp and wait
+M109 S0  ; set hotend temp and wait
+M106 S0 ; set fan speed
 
+M851 ; Homing and then Probe-Offset-Wizard
 ```
 
-# Required G-Code Headers
+
+
 
 # Performed Firmware Adjustments
 ## Notes
