@@ -16,8 +16,13 @@ To generate G-Code, employ the [FullControlXYZ](https://fullcontrol.xyz/) librar
 Using [Repetier](https://www.repetier.com/) you can connect your computer with the printer. This allows for direct manual control over the position of your print head and other parameters. Furthermore it allows for fast uploading of the G-Code and a rough preview is depicted.
 
 ### Firmware
-The control over the different components of the 3D printer is done by the firmware which can be compared how Arduino works. In the firmware standard procedures and parameters are controlled. Adjusting firmware allows for advanced usage of the 3d printer and modification. The original [Prusa Firmware](https://github.com/prusa3d/Prusa-Firmware) is based on the Marlin Firmware. The modified 3d printer uses the Marlin Firmware, which can be found [here](https://marlinfw.org/). The Marlin Firmware is preferred over the original Prusa Firmware because the adjustments are more centralized, allow for more flexibility. A guide on adjusting and flashing the firmware is seen [here](https://youtu.be/eq_ygvHF29I?si=oBdEPBt3eG3QWW10.)
-The Marlin Firmware was adjusted to accomodate the limitations and needs of our print setup. All firmware changes deviating from the original "Marlin Prusa MK3" [configuration](https://github.com/MarlinFirmware/Configurations) are listed down below.
+The control over the different components of the 3D printer is done by the firmware which can be compared how Arduino works. In the firmware standard procedures and parameters are controlled. Adjusting firmware allows for advanced usage of the 3d printer and modification. The original [Prusa Firmware](https://github.com/prusa3d/Prusa-Firmware) is based on the Marlin Firmware. The modified 3d printer uses the Marlin Firmware, which can be found [here](https://marlinfw.org/). The Marlin Firmware is preferred over the original Prusa Firmware due to its centralized adjustments, which offer greater flexibility. A guide on adjusting and flashing the firmware can be found [here](https://youtu.be/eq_ygvHF29I?si=oBdEPBt3eG3QWW10.)
+The Marlin Firmware was adjusted to accomodate the needs and limitations of our print setup. All firmware changes deviating from the original "Marlin Prusa MK3" [configuration](https://github.com/MarlinFirmware/Configurations) are listed down below.
+
+# Your first print
+
+
+
 
 
 # Required G-Code Headers
