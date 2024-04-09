@@ -11,7 +11,7 @@ Before proceeding, it is essential to ensure that VS Code is successfully instal
 
 ## First steps
 ### G-Code generation 
-For G-Code generation use the [FullControlXYZ](https://fullcontrol.xyz/) library on python. You may have heard of FullControlXYZ via their viral ball challenge print or their modification of a Prusa MK3 into a 5 axis printer. The FullControlXYZ GitHub repository with can be found [here](https://github.com/FullControlXYZ/fullcontrol). FullControlXYZ is a useful tool to generate G-Code. Using simple python functions, you can draw out your print and translate it into G-Code.
+To generate G-Code, employ the [FullControlXYZ](https://fullcontrol.xyz/) library in Python. You might be familiar with FullControlXYZ from their popular ball challenge print or their conversion of a Prusa MK3 into a 5-axis printer. Access the FullControlXYZ GitHub repository [here](https://github.com/FullControlXYZ/fullcontrol). FullControlXYZ serves as a valuable tool for G-Code generation. By utilizing straightforward Python functions, you can sketch your print and convert it into G-Code effortlessly.
 ### Control over printer and G-Code uploading
 Using [Repetier](https://www.repetier.com/) you can connect your computer with the printer. This allows for direct manual control over the position of your print head and other parameters. Furthermore it allows for fast uploading of the G-Code and a rough preview is depicted.
 
