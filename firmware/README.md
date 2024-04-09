@@ -4,15 +4,12 @@
 Marlin Firmware stands as a continually evolving cornerstone of 3D printing, marked by its perpetual updates and collaborative development. Its modular architecture and open-source ethos ensure adaptability and innovation, empowering users to push the boundaries of additive manufacturing. Therefore, meticulous documentation of firmware adjustments is crucial, enabling smooth transitions to newer versions of Marlin Firmware.
 
 ## Extruder Adjustments
-Because the extruding mechanism is different, this has to be adjusted in the Firmware. 
-
-
-
+Because the extruding mechanism is different, this has to be adjusted in the Firmware. The setting can be found in the file Configuration.h in line 1227. The first three values represent the xyz-axis whereas the fourth represents the e-axis, i.e. extrusion. This values had to be increased from 280 to 800. 
 ````
 #if ENABLED(GEARBOX_BEAR)
   #define DEFAULT_AXIS_STEPS_PER_UNIT { 100, 100, 3200/8, 490 }
 #else
-  #define DEFAULT_AXIS_STEPS_PER_UNIT { 100, 100, 3200/8, ***800*** }
+  #define DEFAULT_AXIS_STEPS_PER_UNIT { 100, 100, 3200/8, 800 } //HERE THE NUMBER WAS CHANGED FROM 280 TO 800
 #endif
 
 ````
