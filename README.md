@@ -25,6 +25,9 @@ The Marlin Firmware was adjusted to accomodate the limitations and needs of our 
 # Required G-Code Headers
 
 # Performed Firmware Adjustments
+## Notes
+Marlin Firmware stands as a continually evolving cornerstone of 3D printing, marked by its perpetual updates and collaborative development. Its modular architecture and open-source ethos ensure adaptability and innovation, empowering users to push the boundaries of additive manufacturing. Therefore, meticulous documentation of firmware adjustments is crucial, enabling smooth transitions to newer versions of Marlin Firmware.
+
 
 ## Bed Size Adjustments
 In Configuration.h, line 1753 "geometry section", the values are adjusted according to the syringe position and the syringe holder.
@@ -134,7 +137,7 @@ M18 S0 Z ; Prevents the idle disabling of the z-steppers
 ```
 
 ## Bed leveling
-Bed leveling can be achieved using different methods. In Configuration.h, line 1937, the leveling type can be set. The manual leveling through bed_mesh_leveling using the syringe tip might be the most precise (a detailed tutorial can be found [here](https://all3dp.com/2/mesh-bed-leveling-all-you-need-to-know/)), but due to practicality the 3-point leveling method(AUTO_BED_LEVELING_3POINT) was chosen. **This leveling method must not be performed while the syringe tip is attached!**. Enabling line 1954 ```#define RESTORE_LEVELING_AFTER_G28``` bed leveling will be restored when performing homing after bed leveling.
+Bed leveling can be achieved using different methods. In Configuration.h, line 1937, the leveling type can be set. The manual leveling through bed_mesh_leveling using the syringe tip might be the most precise (a detailed tutorial can be found [here](https://all3dp.com/2/mesh-bed-leveling-all-you-need-to-know/)), but due to practicality the 3-point leveling method(AUTO_BED_LEVELING_3POINT) was chosen. **This leveling method must not be performed while the syringe tip is attached!**. Enabling line 1954 in Configuration.h ```#define RESTORE_LEVELING_AFTER_G28```, bed leveling will be restored when performing homing after bed leveling.
 
 
 by manual leveling through changing to bed_mesh_leveling in the marlin firmware. [Here](https://all3dp.com/2/mesh-bed-leveling-all-you-need-to-know/) is a tutorial on how it is done.
