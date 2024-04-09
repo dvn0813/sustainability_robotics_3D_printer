@@ -71,7 +71,8 @@ Additionally by defining the height before and after homing, bumping of syringe 
 #define Z_AFTER_HOMING  20      // (mm) Height to move to after homing Z
 ```
 ### Adjusting Offset between Probe and Needle Tip
-Using the PROBE_OFFSET_WIZARD function, the calibration of the offset between probe and needle can be done. Additionally this allows for calibration before a print when the print substrate cannot be detected by the PINDA. The code can be found in Configuration_adv.h in line 1382. Use a "PROBE_OFFSET_WIZARD_START_Z" greater than the expected offset and adjust via LCD menu. This method allows you to keep all of the previously performed steps such as Bed Leveling and Homing, which would be otherwise deleted when pressing "Terminate" in the Repetier program.
+Using the PROBE_OFFSET_WIZARD function, the calibration of the offset between probe and needle can be done. Additionally this allows for calibration before a print when the print substrate cannot be detected by the PINDA. The code can be found in Configuration_adv.h in line 1382. Use an initial offset, "PROBE_OFFSET_WIZARD_START_Z", greater than the expected offset and adjust via LCD menu. When printing on the print bed provided by Prusa, an initial offset of 12 mm was chosen. When printing with additional non-metallic substrates, increase the initial offset accordingly. Afterwards use the LCD menu: Motion -> Z Probe Wizard, to fine-tune the distance. The method used, which is also quite a common method in robotics, is to put a sheet of paper underneath the syringe tip and adjust the tip so that there is adequate resistance when trying to remove the paper.
+This method allows you to keep all of the previously performed steps such as Bed Leveling and Homing, which would be otherwise deleted when pressing "Terminate" in the Repetier program.
 
 
 ```
