@@ -100,10 +100,7 @@ This method allows you to keep all of the previously performed steps such as Bed
 ## Z-Steppers Alignment
 
 ### Z-Steppers Auto-Alignment *not possible using Prusa Einsy Rambo Board*
-If 2 stepper drivers were available, meaning if separate control over the Z-Steppers was available, the Alignment can be easily done using firmware built-in procedures:
-Marlin Documentation can be found [here](https://marlinfw.org/docs/configuration/configuration.html#z-steppers-auto-alignment)  
--uncommented line 973 in Configuration_adv.h  
--line 981: #define Z_STEPPER_ALIGN_XY { {  30, 180 }, { 110,  30 }, { 180, 180 } }
+If 2 stepper drivers were available, meaning if separate control over the Z-Steppers was available, the Alignment can be easily done using firmware-built-in procedures. Marlin Documentation can be found [here](https://marlinfw.org/docs/configuration/configuration.html#z-steppers-auto-alignment). Unfortunately this is not possible with our printer.
 ### Z-Steppers Auto-Alignment - mechanically forced
 The Einsy Rambo board of Prusa MK3 does not support "Z Steppers Auto-Alignment". Only one stepper driver is used for both Z-steppers, meaning they are independent of each other and are always activated at the same time.
 Nonetheless the Auto-Alignment can be achieved using [mechanically forced alignment](https://www.reddit.com/r/ender3v2/comments/oy0sct/comment/h7pttyc/?utm_source=share&utm_medium=web2x&context=3) via G-code which was previously M915 (deprecated) on Marlin. The following G-Code can be added prior to the actual print:
