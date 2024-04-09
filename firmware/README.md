@@ -13,6 +13,9 @@ Because the extruding mechanism is different, this has to be adjusted in the Fir
 #endif
 
 ````
+### Extruder Minimum Temperature
+In Configuration.h, line 878, ```#define EXTRUDE_MINTEMP 10``` from 175 to 10.
+
 
 ## Bed Size Adjustments
 In Configuration.h, line 1753 "geometry section", the values are adjusted according to the syringe position and the syringe holder.
