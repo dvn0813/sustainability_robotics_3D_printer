@@ -3,6 +3,19 @@
 ## Notes
 Marlin Firmware stands as a continually evolving cornerstone of 3D printing, marked by its perpetual updates and collaborative development. Its modular architecture and open-source ethos ensure adaptability and innovation, empowering users to push the boundaries of additive manufacturing. Therefore, meticulous documentation of firmware adjustments is crucial, enabling smooth transitions to newer versions of Marlin Firmware.
 
+## Extruder Adjustments
+Because the extruding mechanism is different, this has to be adjusted in the Firmware. 
+
+
+
+````
+#if ENABLED(GEARBOX_BEAR)
+  #define DEFAULT_AXIS_STEPS_PER_UNIT { 100, 100, 3200/8, 490 }
+#else
+  #define DEFAULT_AXIS_STEPS_PER_UNIT { 100, 100, 3200/8, ***800*** }
+#endif
+
+````
 
 ## Bed Size Adjustments
 In Configuration.h, line 1753 "geometry section", the values are adjusted according to the syringe position and the syringe holder.
