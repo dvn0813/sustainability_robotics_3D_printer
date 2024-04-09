@@ -78,7 +78,7 @@ Additionally by defining the height before and after homing, bumping of syringe 
 ```
 ### Adjusting Offset between Probe and Needle Tip - Offset Wizard
 Using the PROBE_OFFSET_WIZARD function, the calibration of the offset between probe and needle can be done. Additionally this allows for calibration before a print when the print substrate cannot be detected by the PINDA. The code can be found in Configuration_adv.h in line 1382. Use an initial offset, "PROBE_OFFSET_WIZARD_START_Z", greater than the expected offset and adjust via LCD menu. When printing on the print bed provided by Prusa, an initial offset of 12 mm was chosen. When printing with additional non-metallic substrates, increase the initial offset accordingly. Afterwards use the LCD menu: Motion -> Z Probe Wizard, to fine-tune the distance. The method used, which is also quite a common method in robotics, is to put a sheet of paper underneath the syringe tip and adjust the tip so that there is adequate resistance when trying to remove the paper.
-This method allows you to keep all of the previously performed steps such as Bed Leveling and Homing, which would be otherwise deleted when pressing "Notstopp" in the Repetier program.
+This method allows you to keep all of the previously performed steps such as Bed Leveling and Homing, which would be otherwise deleted when pressing "Notstopp" in the Repetier program. PROBE_OFFSET_WIZARD can be called using the M851 G-Code.
 
 
 ```
@@ -101,6 +101,9 @@ This method allows you to keep all of the previously performed steps such as Bed
 ```
 
 When enabling ```PROBE_OFFSET_WIZARD_XY_POS { X_CENTER, Y_CENTER }```, disable in **draw_z_offset_wizard.cpp (with the path: \Marlin-2.1.2.2\Marlin\src\lcd\extui\mks_ui\draw_z_offset_wizard.cpp)** line 115 and 116. This prevents a z-homing move when the probe offset wizard goes to its XY_POS.
+
+
+
 
 ```
 #if HOMING_Z_WITH_PROBE && defined(PROBE_OFFSET_WIZARD_START_Z)
