@@ -134,7 +134,7 @@ M18 S0 Z ; Prevents the idle disabling of the z-steppers
 ```
 
 ## Bed leveling
-Bed leveling can be achieved using different methods. In Configuration.h, line 1937, the leveling type can be set. The manual leveling through bed_mesh_leveling using the syringe tip might be the most precise (a detailed tutorial can be found [here](https://all3dp.com/2/mesh-bed-leveling-all-you-need-to-know/)), but due to practicality the 3-point leveling method(AUTO_BED_LEVELING_3POINT) was chosen. **This leveling method must not be performed with the syringe tip attached!**
+Bed leveling can be achieved using different methods. In Configuration.h, line 1937, the leveling type can be set. The manual leveling through bed_mesh_leveling using the syringe tip might be the most precise (a detailed tutorial can be found [here](https://all3dp.com/2/mesh-bed-leveling-all-you-need-to-know/)), but due to practicality the 3-point leveling method(AUTO_BED_LEVELING_3POINT) was chosen. **This leveling method must not be performed while the syringe tip is attached!**. Enabling line 1954 ```#define RESTORE_LEVELING_AFTER_G28``` bed leveling will be restored when performing homing after bed leveling.
 
 
 by manual leveling through changing to bed_mesh_leveling in the marlin firmware. [Here](https://all3dp.com/2/mesh-bed-leveling-all-you-need-to-know/) is a tutorial on how it is done.
