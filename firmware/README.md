@@ -3,7 +3,9 @@
 ## Notes
 Marlin Firmware stands as a continually evolving cornerstone of 3D printing, marked by its perpetual updates and collaborative development. Its modular architecture and open-source ethos ensure adaptability and innovation, empowering users to push the boundaries of additive manufacturing. Therefore, meticulous documentation of firmware adjustments is crucial, enabling smooth transitions to newer versions of Marlin Firmware.
 
-## Extruder Adjustments
+
+## Stepper Adjustments
+### Extruder Adjustments
 Because the extruding mechanism is different, this has to be adjusted in the Firmware. The setting can be found in the file Configuration.h in line 1227. The first three values represent the xyz-axis whereas the fourth represents the e-axis, i.e. extrusion. This values had to be increased from 280 to 800. 
 ````
 #if ENABLED(GEARBOX_BEAR)
@@ -13,9 +15,13 @@ Because the extruding mechanism is different, this has to be adjusted in the Fir
 #endif
 
 ````
-### Extruder Minimum Temperature
+#### Extruder Minimum Temperature
 In Configuration.h, line 878, ```#define EXTRUDE_MINTEMP 10``` from 175 to 10.
+#### Extruder Direction 
+In Configuration.h, line 1715 ```#define INVERT_E0_DIR true``` the direction was inverted. 
 
+### Z-Axis
+In Configuration.h, line 1683 ```#define DISABLE_Z``` was uncommented so that the z-steppers are locked when not in use. This prevents loss of accuracy.
 
 ## Bed Size Adjustments
 In Configuration.h, line 1753 "geometry section", the values are adjusted according to the syringe position and the syringe holder.
