@@ -10,6 +10,9 @@ Before proceeding, it is essential to ensure that VS Code is successfully instal
 
 
 ## First steps
+### GitHub usage
+Familiarize yourself with the basics of Github. [Here](https://youtu.be/mJ-qvsxPHpY?si=aq6SG8-PyCSHJKKq) is a very useful introductory video to the basics of Github.
+
 ### G-Code generation 
 To generate G-Code, employ the [FullControlXYZ](https://fullcontrol.xyz/) library in Python. You might be familiar with FullControlXYZ from their popular ball challenge print or their conversion of a Prusa MK3 into a 5-axis printer. Access the FullControlXYZ GitHub repository [here](https://github.com/FullControlXYZ/fullcontrol). FullControlXYZ serves as a valuable tool for G-Code generation. By utilizing straightforward Python functions, you can sketch your print and convert it into G-Code effortlessly.
 ### Control over printer and G-Code uploading
