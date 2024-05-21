@@ -252,7 +252,7 @@
 #define EXTRUDERS 1
 
 // Generally expected filament diameter (1.75, 2.85, 3.0, ...). Used for Volumetric, Filament Width Sensor, etc.
-#define DEFAULT_NOMINAL_FILAMENT_DIA 1.75
+#define DEFAULT_NOMINAL_FILAMENT_DIA 12.5
 
 // For Cyclops or any "multi-extruder" that shares a single nozzle.
 //#define SINGLENOZZLE
@@ -875,7 +875,7 @@
  * *** IT IS HIGHLY RECOMMENDED TO LEAVE THIS OPTION ENABLED! ***
  */
 #define PREVENT_COLD_EXTRUSION
-#define EXTRUDE_MINTEMP 175
+#define EXTRUDE_MINTEMP 10
 
 /**
  * Prevent a single extrusion longer than EXTRUDE_MAXLENGTH.
@@ -1227,7 +1227,7 @@
 #if ENABLED(GEARBOX_BEAR)
   #define DEFAULT_AXIS_STEPS_PER_UNIT { 100, 100, 3200/8, 490 }
 #else
-  #define DEFAULT_AXIS_STEPS_PER_UNIT { 100, 100, 3200/8, 280 }
+  #define DEFAULT_AXIS_STEPS_PER_UNIT { 100, 100, 3200/8, 800 }
 #endif
 
 /**
@@ -1235,7 +1235,7 @@
  * Override with M203
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 100, 100, 12, 120 }
+#define DEFAULT_MAX_FEEDRATE          { 300, 300, 20, 200 }
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
