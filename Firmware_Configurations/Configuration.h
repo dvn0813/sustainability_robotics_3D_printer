@@ -79,7 +79,7 @@
 //#define TALLBEAR
 
 // SuperPINDA present?
-//#define SUPERPINDA
+#define SUPERPINDA
 
 // @section machine
 
