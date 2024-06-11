@@ -1543,7 +1543,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET {-10, 10, 0 }
+#define NOZZLE_TO_PROBE_OFFSET {0, 0, 0 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -1620,9 +1620,9 @@
  * Example: `M851 Z-5` with a CLEARANCE of 4  =>  9mm from bed to nozzle.
  *     But: `M851 Z+1` with a CLEARANCE of 2  =>  2mm from bed to nozzle.
  */
-#define Z_CLEARANCE_DEPLOY_PROBE    2 // (mm) Z Clearance for Deploy/Stow
-#define Z_CLEARANCE_BETWEEN_PROBES  2 // (mm) Z Clearance between probe points
-#define Z_CLEARANCE_MULTI_PROBE     1 // (mm) Z Clearance between multiple probes
+#define Z_CLEARANCE_DEPLOY_PROBE    10 // (mm) Z Clearance for Deploy/Stow
+#define Z_CLEARANCE_BETWEEN_PROBES  10 // (mm) Z Clearance between probe points
+#define Z_CLEARANCE_MULTI_PROBE     10 // (mm) Z Clearance between multiple probes
 #define Z_AFTER_PROBING           5 // (mm) Z position after probing is done
 
 #define Z_PROBE_LOW_POINT          -1 // (mm) Farthest distance below the trigger-point to go before stopping
@@ -1754,15 +1754,15 @@
 // @section geometry
 
 // The size of the printable area
-#define X_BED_SIZE 230.5
-#define Y_BED_SIZE 217
+#define X_BED_SIZE 286.5
+#define Y_BED_SIZE 277
 
 // Travel limits (linear=mm, rotational=°) after homing, corresponding to endstop positions.
 #define X_MIN_POS 13.5
 #define Y_MIN_POS -37
 #define Z_MIN_POS 0
-#define X_MAX_POS 244
-#define Y_MAX_POS 180
+#define X_MAX_POS 300
+#define Y_MAX_POS 240
 #if ENABLED(TALLBEAR)
  #define Z_MAX_POS 320
 #else
